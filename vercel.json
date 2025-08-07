@@ -10,8 +10,9 @@
       }
     },
     {
-      "src": "website/static/**",
-      "use": "@vercel/static"
+      "src": "build_files.sh",
+      "use": "@vercel/static",
+    	"config":{"distDir":"staticfiles"}
     }
   ],
   "routes": [
