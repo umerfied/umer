@@ -23,14 +23,5 @@
       "src": "/(.*)",
       "dest": "/umer/wsgi.py"
     }
-  ],
-  "env": {
-    "DJANGO_SETTINGS_MODULE": "umer.settings",
-    "PYTHONPATH": "."
-  },
-  "functions": {
-    "umer/wsgi.py": {
-      "runtime": "python3.9"
-    }
-  }
-}
+}:
+
