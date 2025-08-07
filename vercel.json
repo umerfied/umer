@@ -1,19 +1,36 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "umer/wsgi.py",
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb" }
+      "config": { 
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.9"
+      }
+    },
+    {
+      "src": "website/static/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "/static/$1"
+      "dest": "/website/static/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "umer/wsgi.py"
+      "dest": "/umer/wsgi.py"
     }
-  ]
+  ],
+  "env": {
+    "DJANGO_SETTINGS_MODULE": "umer.settings",
+    "PYTHONPATH": "."
+  },
+  "functions": {
+    "umer/wsgi.py": {
+      "runtime": "python3.9"
+    }
+  }
 }
