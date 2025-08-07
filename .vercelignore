@@ -1,0 +1,25 @@
+# .vercelignore
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.log
+.git/
+.env
+.venv/
+env/
+venv/
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+.DS_Store
+*.zip
+*.tar.gz
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+*.egg-info/
+dist/
+build/
