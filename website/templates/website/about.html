@@ -1,0 +1,36 @@
+{% extends 'website/base.html' %}
+
+{% block title %}About - Simple Website{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1>About Us</h1>
+</div>
+
+<div class="content">
+    <h2>Our Story</h2>
+    <p>Welcome to our simple Django website! This project was created to demonstrate how easy it is to build a clean, functional website using the Django web framework.</p>
+    
+    <p>Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel.</p>
+    
+    <h3>What We Do</h3>
+    <ul>
+        <li><strong>Web Development:</strong> Creating modern, responsive websites using Django and Python</li>
+        <li><strong>Clean Design:</strong> Focusing on user experience and clean, intuitive interfaces</li>
+        <li><strong>Scalable Solutions:</strong> Building applications that can grow with your business</li>
+        <li><strong>Open Source:</strong> Contributing to the open source community and sharing knowledge</li>
+    </ul>
+    
+    <h3>Our Mission</h3>
+    <p>We believe in making web development accessible and enjoyable. Our mission is to create simple, elegant solutions that solve real problems and provide value to users.</p>
+    
+    <div style="background: #e9f4ff; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #007bff;">
+        <h4 style="margin-top: 0; color: #007bff;">Why Django?</h4>
+        <p style="margin-bottom: 0;">Django follows the "Don't Repeat Yourself" (DRY) principle and includes many built-in features like an admin interface, ORM, and robust security features. It's used by companies like Instagram, Pinterest, and Mozilla.</p>
+    </div>
+    
+    <p style="text-align: center; margin-top: 30px;">
+        <a href="{% url 'contact' %}" style="background: #28a745; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block;">Get In Touch</a>
+    </p>
+</div>
+{% endblock %}
